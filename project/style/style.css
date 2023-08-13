@@ -1,0 +1,85 @@
+
+/* Fonts */
+@font-face {
+  font-family: 'Rubik-light';
+  src: url(../Fonts/Rubik/Rubik-Light.ttf);
+}
+@font-face {
+  font-family: 'Rubik-regular';
+  src: url(../Fonts/Rubik/Rubik-Regular.ttf);
+}
+@font-face {
+  font-family: 'Rubik-medium';
+  src: url(../Fonts/Rubik/Rubik-Medium.ttf);
+}
+@font-face {
+  font-family: 'Rubik-semibold';
+  src: url(../Fonts/Rubik/Rubik-SemiBold.ttf);
+}
+@font-face {
+  font-family: 'Rubik-bold';
+  src: url(../Fonts/Rubik/Rubik-Bold.ttf);
+}
+@font-face {
+  font-family: 'Rubik-extrabold';
+  src: url(../Fonts/Rubik/Rubik-ExtraBold.ttf);
+}
+@font-face {
+  font-family: 'Rubik-black';
+  src: url(../Fonts/Rubik/Rubik-Black.ttf);
+}
+@font-face {
+  font-family: "Roboto-bold";
+  src: url(../Fonts/Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+  font-family: "Roboto-regular";
+  src: url(../Fonts/Roboto/Roboto-Medium.ttf);
+}
+.rubik-light{
+  font-family: 'Rubik-light';
+  font-weight: 300;
+}
+.rubik-normal{
+  font-family: 'Rubik-regular';
+  font-weight: 400;
+}
+.rubik-medium{
+  font-family: 'Rubik-medium';
+  font-weight: 500;
+}
+.rubik-semibold{
+  font-family: 'Rubik-semibold';
+  font-weight: 600;
+}
+.rubik-bold{
+  font-family: 'Rubik-bold';
+  font-weight: 700;
+}
+.rubik-extrabold{
+  font-family: 'Rubik-extrabold';
+  font-weight: 800;
+}
+.rubik-black{
+  font-family: 'Rubik-black';
+  font-weight: 900;
+}
+.roboto-bold {
+  font-family: 'Roboto-bold';
+  font-weight: 700;
+}
+.roboto-normal {
+  font-family: 'Roboto-regular';
+  font-weight: 400;
+}
+/* Fonts */
+
+/* header bg */
+.header{
+  background-image: url('../Image/');
+}
+/* header bg */
+
+.about-us{
+  background-image: url('../Image/About-us\ 1.png');
+}
