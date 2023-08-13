@@ -21,12 +21,15 @@ tailwind.config = {
       },
       center: 'true',
     },
-    colors: {
-      white: '#ffffff',
-      lightGreen: '#7EB693',
-      currentGeen :'#274C5B',
-      lightGray :'#F1F8F4',
-
+    
+      colors: {
+        white: '#ffffff',
+        lightGreen: '#7EB693',
+        currentGeen :'#274C5B',
+        lightGray : '#F1F8F4',
+        currentGray: '#525C60',
+        currentBlue: '#274C5B',
+      
     },
   },
 };
