@@ -74,5 +74,9 @@
 }
 /* Fonts */
 
-/* header bg */
+/* bg regular */
+  .bg-regular {
+    background: url(../Image/oxirgidan-bitta-oldin.png);
+  }
+/* bg regular */
 
