@@ -14,10 +14,10 @@ tailwind.config = {
     },
     container: {
       padding: {
-        DEFAULT: '0.5rem',
+        DEFAULT: '0.7rem',
         sm: '0.9rem',
-        lg: '1rem',
-        xl: '1.2rem'
+        lg: '3rem',
+        xl: '3.2rem'
       },
       center: 'true',
     },
@@ -29,7 +29,8 @@ tailwind.config = {
         lightGray : '#F1F8F4',
         currentGray: '#525C60',
         currentBlue: '#274C5B',
-      
+        lightYellow: '#EFD372',
+        cardBg: '#F9F8F8',
     },
   },
 };

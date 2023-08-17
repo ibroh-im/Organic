@@ -78,5 +78,10 @@
   .bg-regular {
     background: url(../Image/oxirgidan-bitta-oldin.png);
   }
+  .header-bg {
+    background: url(../Image/index-header-bg.png);
+  }
 /* bg regular */
-
+.shadow {
+  box-shadow: 0px 20px 35px 0px rgba(167, 167, 167, 0.25);
+}
