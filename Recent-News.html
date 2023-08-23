@@ -36,29 +36,165 @@
 </head>
 <body>  
     <div class="wrapeer">
-          <div>
-            <nav class="md:block circle py-5 hidden bg-black">
-              <div class="container">
-                <div class="flex items-center justify-between">
-                  <div class="h-[35px] w-[144px] xl:h-[45px] xl:w-[154px]">
-                    <img
-                      class="w-full h-full"
-                      src="./project/Image/Logo.jpg"
-                      alt=""
-                    />
+      <div>
+        <nav class="md:block circle py-5 hidden bg-black">
+          <div class="container">
+            <div class="flex items-center justify-between">
+              <div class="h-[35px] w-[144px] xl:h-[45px] xl:w-[154px]">
+                <img
+                  class="w-full h-full"
+                  src="./project/Image/Logo.jpg"
+                  alt=""
+                />
+              </div>
+              <div>
+                <ul class="flex gap-8 roboto-bold">
+                  <li>
+                    <a href="index.html" class="text-currentBlue">Home</a>
+                  </li>
+                  <li>
+                    <a href="about.html" class="text-currentBlue">About</a>
+                  </li>
+
+                  <button
+                    id="dropdownDefaultButton"
+                    data-dropdown-toggle="dropdown"
+                    class="inline-flex items-center text-currentBlue"
+                    type="button"
+                  >
+                    Pages
+                    <svg
+                      class="w-2.5 h-2.5 ml-2.5"
+                      aria-hidden="true"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 10 6"
+                    >
+                      <path
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="m1 1 4 4 4-4"
+                      />
+                    </svg>
+                  </button>
+                  <!-- Dropdown menu -->
+                  <div
+                    id="dropdown"
+                    class="z-[100000001]  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                  >
+                    <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
+                      <li>
+                        <a
+                          href="shop.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Shop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Services.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Services</a
+                        >
+                      </li>
+                      
+                      <li>
+                        <a
+                          href="Portfolio-Standard.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Portfolio Standard</a
+                        >
+                      </li>
+                     
+                      <li>
+                        <a
+                          href="Our-Team.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          > Our Team</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Recent-News.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Recent News</a
+                        >
+                      </li>
+                    </ul>
                   </div>
-                  <div>
-                    <ul class="flex gap-8 roboto-bold">
-                      <li>
-                        <a href="index.html" class="text-currentBlue">Home</a>
-                      </li>
-                      <li>
-                        <a href="about.html" class="text-currentBlue">About</a>
-                      </li>
-    
+
+                  <li>
+                    <a href="#" class="text-currentBlue">Projects</a>
+                  </li>
+                  <li>
+                    <a href="#" class="text-currentBlue">News</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="bg-lightGray hidden rounded-full lg:flex">
+                  <input
+                    type="text"
+                    class="rounded-full border-0 lg:w-[140px] xl:w-[150px] bg-lightGray"
+                  />
+                  <div
+                    class="rounded-full cursor-pointer-pointer flex items-center justify-center text-center bg-lightGreen px-2 m-1"
+                  >
+                    <i class="ri-search-line text-white"></i>
+                  </div>
+                </div>
+                <div
+                  class="border-[1px] border-lightGray rounded-full items-center w-[110px] flex"
+                >
+                  <div
+                    class="rounded-full flex items-center justify-center text-center bg-currentBlue py-1 px-2 m-1"
+                  >
+                    <a href="#"
+                      ><i class="ri-shopping-cart-2-fill text-white"></i
+                    ></a>
+                  </div>
+                  <p class="text-currentBlue text-[14px] roboto-normal">
+                    Cart (0)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <nav class="circle bg-white pb-20 md:mb-0 md:hidden">
+          <div class="container mx-auto px-1 md:px-10">
+            <div
+              class="circle bg-white md:hidden z-[10000] pt-[20px] scroll-y flex items-center fixed left-0 w-[100vw] justify-center border-b-[2px] border-[#C4CDD5] pb-[11px]"
+            >
+              <div
+                class="w-[95%] bg-black md:w-full flex items-center justify-between md:justify-around"
+              >
+                <div class="h-[30px] w-[134px] flex md:border-r-2 pr-4">
+                  <img
+                    class="h-full w-full"
+                    src="./project/Image/Logo.jpg"
+                    alt=""
+                  />
+                </div>
+                <div
+                  class="md:static bg-white flex items-top justify-center md:pb-0 md:h-[42px] duration-500 transition-all h-[100vh] pb-[44px] fixed z-[10] pt-[24px] box-border md:pt-0 md:pl-0 pl-[16px] nav__list left-[-200%] top-[0px] w-[100vw]"
+                >
+                  <ul class="text-white text-center font-semibold">
+                    <li class="py-5">
+                      <a href="index.html" class="text-currentBlue">Home</a>
+                    </li>
+                    <li class="py-5">
+                      <a href="about.html" class="text-currentBlue">About</a>
+                    </li>
+                    <div class="sm:hidden py-5">
                       <button
                         id="dropdownDefaultButton"
-                        data-dropdown-toggle="dropdown"
+                        data-dropdown-toggle="dropdown1"
                         class="inline-flex items-center text-currentBlue"
                         type="button"
                       >
@@ -81,288 +217,152 @@
                       </button>
                       <!-- Dropdown menu -->
                       <div
-                        id="dropdown"
-                        class="z-[100000001]  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                        id="dropdown1"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
                       >
-                        <ul
-                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
-                        >
-                          <li>
-                            <a
-                              href="shop.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Shop</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Services</a
-                            >
-                          </li>
-                          
-                          <li>
-                            <a
-                              href="Portfolio-Standard.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Portfolio Standard</a
-                            >
-                          </li>
-                         
-                          <li>
-                            <a
-                              href="Our-Team.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              > Our Team</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="Recent-News.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Recent News</a
-                            >
-                          </li>
-                        </ul>
-                      </div>
-    
+                      <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
+                    >
                       <li>
-                        <a href="#" class="text-currentBlue">Projects</a>
+                        <a
+                          href="shop.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Shop</a
+                        >
                       </li>
                       <li>
-                        <a href="#" class="text-currentBlue">News</a>
+                        <a
+                          href="Services.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Services</a
+                        >
+                      </li>
+                      
+                      <li>
+                        <a
+                          href="Portfolio-Standard.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Portfolio Standard</a
+                        >
+                      </li>
+                     
+                      <li>
+                        <a
+                          href="Our-Team.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          > Our Team</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Recent-News.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Recent News</a
+                        >
                       </li>
                     </ul>
-                  </div>
-                  <div class="flex items-center gap-3">
-                    <div class="bg-lightGray hidden rounded-full lg:flex">
-                      <input
-                        type="text"
-                        class="rounded-full border-0 lg:w-[140px] xl:w-[150px] bg-lightGray"
-                      />
-                      <div
-                        class="rounded-full cursor-pointer-pointer flex items-center justify-center text-center bg-lightGreen px-2 m-1"
-                      >
-                        <i class="ri-search-line text-white"></i>
                       </div>
                     </div>
-                    <div
-                      class="border-[1px] border-lightGray rounded-full items-center w-[110px] flex"
+                    <div class="hidden py-5 sm:block">
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdownRight"
+                        data-dropdown-placement="right"
+                        class="my-5 inline-flex items-center text-currentBlue"
+                        type="button"
+                      >
+                        Pages
+                        <svg
+                          class="w-2.5 h-2.5 ml-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 9 4-4-4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div
+                        id="dropdownRight"
+                        class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                      >
+                      <ul
+                      class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                      aria-labelledby="dropdownDefaultButton"
                     >
-                      <div
-                        class="rounded-full flex items-center justify-center text-center bg-currentBlue py-1 px-2 m-1"
-                      >
-                        <a href="#"
-                          ><i class="ri-shopping-cart-2-fill text-white"></i
-                        ></a>
+                      <li>
+                        <a
+                          href="shop.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Shop</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Services.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Services</a
+                        >
+                      </li>
+                      
+                      <li>
+                        <a
+                          href="Portfolio-Standard.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Portfolio Standard</a
+                        >
+                      </li>
+                     
+                      <li>
+                        <a
+                          href="Our-Team.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          > Our Team</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="Recent-News.html"
+                          class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                          >Recent News</a
+                        >
+                      </li>
+                    </ul>
                       </div>
-                      <p class="text-currentBlue text-[14px] roboto-normal">
-                        Cart (0)
-                      </p>
                     </div>
-                  </div>
+
+                    <li class="py-5">
+                      <a href="#" class="text-currentBlue">Projects</a>
+                    </li>
+                    <li class="py-5">
+                      <a href="#" class="text-currentBlue">News</a>
+                    </li>
+                  </ul>
                 </div>
-              </div>
-            </nav>
-            <nav class="circle bg-white pb-20 md:mb-0 md:hidden">
-              <div class="container mx-auto px-1 md:px-10">
-                <div
-                  class="circle bg-white md:hidden z-[10000] pt-[20px] scroll-y flex items-center fixed left-0 w-[100vw] justify-center border-b-[2px] border-[#C4CDD5] pb-[11px]"
-                >
+                <div class="nav__part2 flex items-center gap-x-[35px]">
                   <div
-                    class="w-[95%] bg-black md:w-full flex items-center justify-between md:justify-around"
+                    class="flex relative z-[1000] items-center text-[23px] text-[#454F5B] gap-x-[34px]"
                   >
-                    <div class="h-[30px] w-[134px] flex md:border-r-2 pr-4">
-                      <img
-                        class="h-full w-full"
-                        src="./project/Image/Logo.jpg"
-                        alt=""
-                      />
-                    </div>
                     <div
-                      class="md:static bg-white flex items-top justify-center md:pb-0 md:h-[42px] duration-500 transition-all h-[100vh] pb-[44px] fixed z-[10] pt-[24px] box-border md:pt-0 md:pl-0 pl-[16px] nav__list left-[-200%] top-[0px] w-[100vw]"
+                      class="nav__btn relative z-[1000] text-[#FA9021] block text-[30px] md:hidden"
                     >
-                      <ul class="text-white text-center font-semibold">
-                        <li class="py-5">
-                          <a href="index.html" class="text-currentBlue">Home</a>
-                        </li>
-                        <li class="py-5">
-                          <a href="about.html" class="text-currentBlue">About</a>
-                        </li>
-                        <div class="sm:hidden py-5">
-                          <button
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdown1"
-                            class="inline-flex items-center text-currentBlue"
-                            type="button"
-                          >
-                            Pages
-                            <svg
-                              class="w-2.5 h-2.5 ml-2.5"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 10 6"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 1 4 4 4-4"
-                              />
-                            </svg>
-                          </button>
-                          <!-- Dropdown menu -->
-                          <div
-                            id="dropdown1"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                          >
-                          <ul
-                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
-                        >
-                          <li>
-                            <a
-                              href="shop.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Shop</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Services</a
-                            >
-                          </li>
-                          
-                          <li>
-                            <a
-                              href="Portfolio-Standard.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Portfolio Standard</a
-                            >
-                          </li>
-                         
-                          <li>
-                            <a
-                              href="Our-Team.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              > Our Team</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="Recent-News.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Recent News</a
-                            >
-                          </li>
-                        </ul>
-                          </div>
-                        </div>
-                        <div class="hidden py-5 sm:block">
-                          <button
-                            id="dropdownDefaultButton"
-                            data-dropdown-toggle="dropdownRight"
-                            data-dropdown-placement="right"
-                            class="my-5 inline-flex items-center text-currentBlue"
-                            type="button"
-                          >
-                            Pages
-                            <svg
-                              class="w-2.5 h-2.5 ml-2.5"
-                              aria-hidden="true"
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 10 6"
-                            >
-                              <path
-                                stroke="currentColor"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                stroke-width="2"
-                                d="m1 9 4-4-4-4"
-                              />
-                            </svg>
-                          </button>
-                          <!-- Dropdown menu -->
-                          <div
-                            id="dropdownRight"
-                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-                          >
-                          <ul
-                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
-                          aria-labelledby="dropdownDefaultButton"
-                        >
-                          <li>
-                            <a
-                              href="shop.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Shop</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="#"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Services</a
-                            >
-                          </li>
-                          
-                          <li>
-                            <a
-                              href="Portfolio-Standard.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Portfolio Standard</a
-                            >
-                          </li>
-                         
-                          <li>
-                            <a
-                              href="Our-Team.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              > Our Team</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="Recent-News.html"
-                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
-                              >Recent News</a
-                            >
-                          </li>
-                        </ul>
-                          </div>
-                        </div>
-    
-                        <li class="py-5">
-                          <a href="#" class="text-currentBlue">Projects</a>
-                        </li>
-                        <li class="py-5">
-                          <a href="#" class="text-currentBlue">News</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="nav__part2 flex items-center gap-x-[35px]">
-                      <div
-                        class="flex relative z-[1000] items-center text-[23px] text-[#454F5B] gap-x-[34px]"
-                      >
-                        <div
-                          class="nav__btn relative z-[1000] text-[#FA9021] block text-[30px] md:hidden"
-                        >
-                          <i class="ri-menu-line cursor-pointer"></i>
-                        </div>
-                      </div>
+                      <i class="ri-menu-line cursor-pointer"></i>
                     </div>
                   </div>
                 </div>
               </div>
-            </nav>
+            </div>
           </div>
+        </nav>
+      </div>
 
           <header class="h-[25vh] lg:h-[50vh] flex justify-center items-center  w-full relative">
             <img class=" absolute  top-0 w-full h-full" src="./project/Image/news-header.png" alt="">
