@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./project/style/style.css" />
+    <link rel="stylesheet" href="./project/plugins/aos/aos.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet"/>
+    <script src="./project/plugins/tailwind/tailwind.js"></script>
+    <link rel="stylesheet" href="./project/plugins/flowbite/cdnjs.cloudflare.com_ajax_libs_flowbite_1.6.6_flowbite.min.css  "/>
+    <script src="./project/plugins/tailwind/tailwind.config.js"></script>
+    <style>
+      .nav__list_active {
+        top: 80px !important;
+        left: 0 !important;
+      }
+    html,
+    body {
+      position: relative;
+      height: 100%;
+    }
+      
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    } 
+    </style>
+</head>
+<body>  
+    <div class="wrapeer">
+          <div>
+            <nav class="md:block circle py-5 hidden bg-black">
+              <div class="container">
+                <div class="flex items-center justify-between">
+                  <div class="h-[35px] w-[144px] xl:h-[45px] xl:w-[154px]">
+                    <img
+                      class="w-full h-full"
+                      src="./project/Image/Logo.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <ul class="flex gap-8 roboto-bold">
+                      <li>
+                        <a href="index.html" class="text-currentBlue">Home</a>
+                      </li>
+                      <li>
+                        <a href="about.html" class="text-currentBlue">About</a>
+                      </li>
+    
+                      <button
+                        id="dropdownDefaultButton"
+                        data-dropdown-toggle="dropdown"
+                        class="inline-flex items-center text-currentBlue"
+                        type="button"
+                      >
+                        Pages
+                        <svg
+                          class="w-2.5 h-2.5 ml-2.5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 10 6"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="m1 1 4 4 4-4"
+                          />
+                        </svg>
+                      </button>
+                      <!-- Dropdown menu -->
+                      <div
+                        id="dropdown"
+                        class="z-[100000001]  hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                      >
+                        <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="shop.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Shop</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Services</a
+                            >
+                          </li>
+                          
+                          <li>
+                            <a
+                              href="Portfolio-Standard.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Portfolio Standard</a
+                            >
+                          </li>
+                         
+                          <li>
+                            <a
+                              href="Our-Team.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              > Our Team</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="Recent-News.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Recent News</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+    
+                      <li>
+                        <a href="#" class="text-currentBlue">Projects</a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-currentBlue">News</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <div class="bg-lightGray hidden rounded-full lg:flex">
+                      <input
+                        type="text"
+                        class="rounded-full border-0 lg:w-[140px] xl:w-[150px] bg-lightGray"
+                      />
+                      <div
+                        class="rounded-full cursor-pointer-pointer flex items-center justify-center text-center bg-lightGreen px-2 m-1"
+                      >
+                        <i class="ri-search-line text-white"></i>
+                      </div>
+                    </div>
+                    <div
+                      class="border-[1px] border-lightGray rounded-full items-center w-[110px] flex"
+                    >
+                      <div
+                        class="rounded-full flex items-center justify-center text-center bg-currentBlue py-1 px-2 m-1"
+                      >
+                        <a href="#"
+                          ><i class="ri-shopping-cart-2-fill text-white"></i
+                        ></a>
+                      </div>
+                      <p class="text-currentBlue text-[14px] roboto-normal">
+                        Cart (0)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <nav class="circle bg-white pb-20 md:mb-0 md:hidden">
+              <div class="container mx-auto px-1 md:px-10">
+                <div
+                  class="circle bg-white md:hidden z-[10000] pt-[20px] scroll-y flex items-center fixed left-0 w-[100vw] justify-center border-b-[2px] border-[#C4CDD5] pb-[11px]"
+                >
+                  <div
+                    class="w-[95%] bg-black md:w-full flex items-center justify-between md:justify-around"
+                  >
+                    <div class="h-[30px] w-[134px] flex md:border-r-2 pr-4">
+                      <img
+                        class="h-full w-full"
+                        src="./project/Image/Logo.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div
+                      class="md:static bg-white flex items-top justify-center md:pb-0 md:h-[42px] duration-500 transition-all h-[100vh] pb-[44px] fixed z-[10] pt-[24px] box-border md:pt-0 md:pl-0 pl-[16px] nav__list left-[-200%] top-[0px] w-[100vw]"
+                    >
+                      <ul class="text-white text-center font-semibold">
+                        <li class="py-5">
+                          <a href="index.html" class="text-currentBlue">Home</a>
+                        </li>
+                        <li class="py-5">
+                          <a href="about.html" class="text-currentBlue">About</a>
+                        </li>
+                        <div class="sm:hidden py-5">
+                          <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdown1"
+                            class="inline-flex items-center text-currentBlue"
+                            type="button"
+                          >
+                            Pages
+                            <svg
+                              class="w-2.5 h-2.5 ml-2.5"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                            >
+                              <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 1 4 4 4-4"
+                              />
+                            </svg>
+                          </button>
+                          <!-- Dropdown menu -->
+                          <div
+                            id="dropdown1"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          >
+                          <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="shop.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Shop</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Services</a
+                            >
+                          </li>
+                          
+                          <li>
+                            <a
+                              href="Portfolio-Standard.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Portfolio Standard</a
+                            >
+                          </li>
+                         
+                          <li>
+                            <a
+                              href="Our-Team.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              > Our Team</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="Recent-News.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Recent News</a
+                            >
+                          </li>
+                        </ul>
+                          </div>
+                        </div>
+                        <div class="hidden py-5 sm:block">
+                          <button
+                            id="dropdownDefaultButton"
+                            data-dropdown-toggle="dropdownRight"
+                            data-dropdown-placement="right"
+                            class="my-5 inline-flex items-center text-currentBlue"
+                            type="button"
+                          >
+                            Pages
+                            <svg
+                              class="w-2.5 h-2.5 ml-2.5"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 10 6"
+                            >
+                              <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="m1 9 4-4-4-4"
+                              />
+                            </svg>
+                          </button>
+                          <!-- Dropdown menu -->
+                          <div
+                            id="dropdownRight"
+                            class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
+                          >
+                          <ul
+                          class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                          aria-labelledby="dropdownDefaultButton"
+                        >
+                          <li>
+                            <a
+                              href="shop.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Shop</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="#"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Services</a
+                            >
+                          </li>
+                          
+                          <li>
+                            <a
+                              href="Portfolio-Standard.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Portfolio Standard</a
+                            >
+                          </li>
+                         
+                          <li>
+                            <a
+                              href="Our-Team.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              > Our Team</a
+                            >
+                          </li>
+                          <li>
+                            <a
+                              href="Recent-News.html"
+                              class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                              >Recent News</a
+                            >
+                          </li>
+                        </ul>
+                          </div>
+                        </div>
+    
+                        <li class="py-5">
+                          <a href="#" class="text-currentBlue">Projects</a>
+                        </li>
+                        <li class="py-5">
+                          <a href="#" class="text-currentBlue">News</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="nav__part2 flex items-center gap-x-[35px]">
+                      <div
+                        class="flex relative z-[1000] items-center text-[23px] text-[#454F5B] gap-x-[34px]"
+                      >
+                        <div
+                          class="nav__btn relative z-[1000] text-[#FA9021] block text-[30px] md:hidden"
+                        >
+                          <i class="ri-menu-line cursor-pointer"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <header class="h-[25vh] lg:h-[50vh] flex justify-center items-center  w-full relative">
+            <img class=" absolute  top-0 w-full h-full" src="./project/Image/news-header.png" alt="">
+            
+            <div >
+              <div class="  "> 
+                <div class="container ">
+                  <div class="relative  z-[1000]">
+                    <h1 data-aos="fade-right" data-aos-duration="1000" class=" text-currentBlue text-[30px] mb-3 sm:text-[36px] lg:text-[40px]  rubik-bold">
+                        Recent  News
+                    </h1>
+                   
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+          </header>
+    <section class=" py-16">
+        <div class="container">
+
+      <div class="sm:flex items-cneter justify-center gap-4">
+        <div class="relative w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+        <div class="relative mt-16 mb-16 sm:mt-0 sm:mb-0 w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="sm:flex items-cneter mt-20 justify-center gap-4">
+        <div class="relative w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+        <div class="relative mt-16 mb-16 sm:mt-0 sm:mb-0 w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="sm:flex items-cneter mt-20 justify-center gap-4">
+        <div class="relative w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+        <div class="relative mt-16 mb-16 sm:mt-0 sm:mb-0 w-full sm:w-1/2">
+            <a href="news-detail.html">
+                <div class="w-full h-[400px]">
+                  <img class="h-full w-full rounded-[20px] object-cover" src="./project/Image/index-section-9-img.png" alt="">
+                </div>
+                <div class="rounded-full absolute top-10 start-10 bg-white text-center px-4 py-2">
+                  <p class="text-currentBlue rubik-medium text-[20px]">25</p>
+                  <p class="text-currentBlue rubik-medium ">Now</p>
+                </div>
+                <div class="bg-white mx-[20px] shadow absolute bottom-[-50px] rounded-[25px] p-6">
+                  <div class="flex items-center gap-1"><i class="ri-user-fill text-lightGreen text-[18px]"></i><p class="rubik-light text-[10px] sm:text-[14px]">By Rachi Card</p></div>
+                  <p class="text-[24px] rubik-semibold mt-1 text-currentBlue">The Benefits of Vitamin D & How to Get It</p>
+                  <p class="text-currentGray rubik-light">Simply dummy text of the printing and typesetting <br> industry. Lorem Ipsum</p>
+                  <button class="text-currentBlue bg-white rubik-medium text-[14px] rounded-[15px] text-center md:text-start px-4 mt-4 py-4" >
+                    Read More
+                      <i class="ri-arrow-right-line text-[9px] text-white ml-2 bg-currentBlue rounded-full p-1"></i>
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    
+    </div>
+  </section>
+
+                  
+  <section class="block py-10 rounded-5">
+    <div class="container">
+      <div class="flex md:block justify-center align-middle items-center">
+        <div
+          class="bg-regular h-[300px] lg:h-[323px] px-6 rounded-[30px] object-cover hidden md:flex text-center justify-between px-4 items-center"
+        >
+          <h1 data-aos="zoom-in"  data-aos-duration="1000" class="text-white text-[30px] mb-3 sm:text-[36px] lg:text-[50px] text-center md:text-start rubik-bold"
+          >
+            Subscribe to <br />our Newsletter
+          </h1>
+          <div class="flex items-center gap-3" data-aos="zoom-in" data-aos-duration="1500">
+            <input
+              type="text"
+              placeholder="Your Email Address "
+              class="p-3 md:p-5 w-full md:w-[220px] lg:w-[280px] border-none rounded-[10px]"
+            />
+            <button
+              class="text-white roboto-normal bg-currentBlue rounded-[10px] md:text-[18px] py-3 md:py-5 px-5 md:px-7"
+            >
+              Subscribe
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex justify-center items-center w-full md:hidden">
+        <div
+          class="bg-regular flex justify-center items-center w-full h-[300px] lg:h-[323px] px-6 rounded-[30px] object-cover px-4"
+        >
+          <div class="md:hidden">
+            <h1
+              class="text-white text-[30px] mb-3 sm:text-[36px] lg:text-[50px] text-center md:text-start rubik-bold"
+            >
+              Subscribe to <br />our Newsletter
+            </h1>
+            <div class="flex items-center gap-3">
+              <input
+                type="text"
+                placeholder="Your Email Address "
+                class="p-3 md:p-5 w-full md:w-[220px] lg:w-[280px] border-none rounded-[10px]"
+              />
+              <button
+                class="text-white roboto-normal bg-currentBlue rounded-[10px] md:text-[18px] py-3 md:py-5 px-5 md:px-7"
+              >
+                Subscribe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="block">
+    <div class="container">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="sm:flex">
+          <div class="pr-5">
+            <p
+              class="text-[18px] md:text-[24px] mb-4 lg:text-[30px] lg:text-end text-currentBlue roboto-bold"
+            >
+              Contact Us
+            </p>
+            <div class="md:text-[18px] text-currentGray lg:text-end">
+              <p class="roboto-bold">Email</p>
+              <a href="mailto:needhelp@Organia.com " class=""
+                >needhelp@Organia.com
+              </a>
+            </div>
+            <div class="md:text-[18px] py-2 text-currentGray lg:text-end">
+              <p class="roboto-bold">Phone</p>
+              <a href="tel:+666 888 888" class="">666 888 888 </a>
+            </div>
+            <div class="md:text-[18px] py-2 text-currentGray lg:text-end">
+              <p class="roboto-bold">Address</p>
+              <a href="mailto:needhelp@Organia.com " class="shrink-0"
+                >Address 88 road, borklyn street, USA</a
+              >
+            </div>
+          </div>
+          <div
+            class="hidden sm:block w-[1px] h-[225px] md:h-[235px] lg:h-[270px] bg-currentGray"
+          ></div>
+        </div>
+        <div class="sm:flex lg:col-span-2 gap-5">
+          <div>
+            <div class="h-[30px] flex sm:justify-center mt-3 mb-4">
+              <img
+                class="h-full w-[134px]"
+                src="./project/Image/Logo.jpg"
+                alt=""
+              />
+            </div>
+            <div class="md:text-[18px] text-currentGray sm:text-center">
+              <p>
+                Simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum simply dummy text of the printing
+              </p>
+              <div class="flex justify-center mt-6 gap-4">
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
+                  <circle cx="30" cy="30.7158" r="30" fill="#EFF6F1"/>
+                  <path d="M33.6585 23.2631C34.7231 23.2661 35.7431 23.6747 36.4958 24.3996C37.2486 25.1244 37.6729 26.1067 37.6761 27.1318V34.8685C37.6729 35.8936 37.2486 36.8758 36.4958 37.6007C35.7431 38.3256 34.7231 38.7342 33.6585 38.7372H25.6243C24.5598 38.7342 23.5397 38.3256 22.787 37.6007C22.0342 36.8758 21.6099 35.8936 21.6068 34.8685V27.1318C21.6099 26.1067 22.0342 25.1244 22.787 24.3996C23.5397 23.6747 24.5598 23.2661 25.6243 23.2631H33.6585ZM33.6585 21.7158H25.6243C22.5309 21.7158 20 24.153 20 27.1318V34.8685C20 37.8473 22.5309 40.2845 25.6243 40.2845H33.6585C36.752 40.2845 39.2828 37.8473 39.2828 34.8685V27.1318C39.2828 24.153 36.752 21.7158 33.6585 21.7158Z" fill="#274C5B"/>
+                  <path d="M34.8638 27.1326C34.6254 27.1326 34.3924 27.0645 34.1942 26.937C33.996 26.8095 33.8416 26.6282 33.7504 26.4162C33.6591 26.2041 33.6353 25.9708 33.6818 25.7457C33.7283 25.5205 33.8431 25.3137 34.0116 25.1514C34.1802 24.9891 34.3949 24.8786 34.6287 24.8338C34.8625 24.789 35.1048 24.812 35.325 24.8999C35.5452 24.9877 35.7334 25.1365 35.8659 25.3273C35.9983 25.5182 36.069 25.7425 36.069 25.9721C36.0693 26.1246 36.0384 26.2756 35.9779 26.4166C35.9175 26.5575 35.8287 26.6856 35.7167 26.7934C35.6048 26.9013 35.4718 26.9867 35.3254 27.0449C35.179 27.1031 35.0222 27.1329 34.8638 27.1326ZM29.6415 27.906C30.2772 27.906 30.8986 28.0875 31.4271 28.4276C31.9556 28.7677 32.3676 29.251 32.6108 29.8166C32.8541 30.3821 32.9177 31.0044 32.7937 31.6047C32.6697 32.2051 32.3636 32.7565 31.9141 33.1894C31.4646 33.6222 30.892 33.917 30.2685 34.0364C29.6451 34.1558 28.9989 34.0945 28.4116 33.8603C27.8243 33.626 27.3224 33.2293 26.9692 32.7204C26.6161 32.2114 26.4276 31.6131 26.4276 31.0009C26.4285 30.1804 26.7674 29.3937 27.3699 28.8135C27.9724 28.2333 28.7894 27.9069 29.6415 27.906ZM29.6415 26.3588C28.6881 26.3588 27.756 26.631 26.9633 27.1411C26.1705 27.6512 25.5526 28.3762 25.1878 29.2245C24.8229 30.0727 24.7274 31.0061 24.9134 31.9066C25.0994 32.8071 25.5586 33.6342 26.2328 34.2834C26.9069 34.9327 27.7659 35.3748 28.701 35.5539C29.6362 35.733 30.6054 35.6411 31.4863 35.2897C32.3672 34.9384 33.1201 34.3434 33.6498 33.58C34.1795 32.8166 34.4622 31.9191 34.4622 31.0009C34.4622 29.7698 33.9543 28.589 33.0503 27.7184C32.1462 26.8479 30.92 26.3588 29.6415 26.3588Z" fill="#274C5B"/>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
+                    <circle cx="30" cy="30.7158" r="30" fill="#EFF6F1"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M39.2828 31.0001C39.2828 25.873 34.9657 21.7158 29.6414 21.7158C24.3171 21.7158 20 25.873 20 31.0001C20 35.634 23.5251 39.475 28.1349 40.1721V33.6847H25.6863V31.0001H28.1349V28.9547C28.1349 26.6282 29.5747 25.3421 31.7767 25.3421C32.8317 25.3421 33.9353 25.5236 33.9353 25.5236V27.8087H32.7189C31.5219 27.8087 31.1475 28.524 31.1475 29.2593V31.0001H33.8212L33.3942 33.6847H31.1479V40.173C35.7577 39.4762 39.2828 35.6353 39.2828 31.0001Z" fill="#274C5B"/>
+                    </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
+                    <circle cx="30" cy="30.7158" r="30" fill="#EFF6F1"/>
+                    <path d="M40.6602 24.6742C39.8852 25.011 39.0652 25.2328 38.2261 25.3328C39.1079 24.8164 39.7711 23.9961 40.0912 23.0257C39.2575 23.5132 38.3469 23.8553 37.3984 24.0372C36.9991 23.6186 36.5187 23.2857 35.9866 23.0585C35.4546 22.8313 34.8818 22.7148 34.3033 22.7158C31.9609 22.7158 30.0654 24.5839 30.0654 26.8866C30.0637 27.2069 30.1004 27.5263 30.1747 27.8378C28.4951 27.7591 26.8504 27.3306 25.3458 26.5798C23.8413 25.829 22.51 24.7724 21.4372 23.4777C21.0608 24.1122 20.8618 24.8361 20.8608 25.5738C20.8608 27.02 21.6154 28.2984 22.7547 29.0473C22.0797 29.0313 21.4185 28.8526 20.8273 28.5265V28.5781C20.8273 30.6011 22.2907 32.2841 24.2276 32.6671C23.8634 32.7642 23.488 32.8134 23.1111 32.8135C22.8436 32.814 22.5767 32.788 22.3144 32.736C22.8528 34.3931 24.42 35.5983 26.2764 35.6327C24.7679 36.7953 22.9159 37.4236 21.0115 37.419C20.6734 37.4185 20.3357 37.3984 20 37.3587C21.9374 38.5958 24.1895 39.2502 26.4882 39.244C34.2943 39.244 38.5589 32.8867 38.5589 27.373C38.5589 27.1922 38.5541 27.0114 38.5455 26.8349C39.3733 26.2462 40.0893 25.5145 40.6602 24.6742Z" fill="#274C5B"/>
+                    </svg>
+                </a>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
+                    <circle cx="30" cy="30.7158" r="30" fill="#EFF6F1"/>
+                    <path d="M29.7966 20.7158C24.3866 20.7158 20 25.1005 20 30.5081C20 34.5168 22.4142 37.9616 25.8649 39.4785C25.8386 38.7965 25.8605 37.9747 26.0354 37.2315C26.2235 36.4359 27.295 31.8939 27.295 31.8939C27.295 31.8939 26.9801 31.2687 26.9801 30.3463C26.9801 28.895 27.8198 27.8108 28.8695 27.8108C29.7617 27.8108 30.1903 28.4797 30.1903 29.2797C30.1903 30.1758 29.6173 31.5135 29.3243 32.7551C29.0794 33.7955 29.8447 34.6392 30.8725 34.6392C32.7269 34.6392 33.9777 32.2567 33.9777 29.4327C33.9777 27.2863 32.5301 25.6819 29.9016 25.6819C26.932 25.6819 25.0776 27.8983 25.0776 30.3726C25.0776 31.225 25.3313 31.8283 25.7249 32.2917C25.9042 32.5059 25.9305 32.5933 25.8649 32.8381C25.8168 33.0174 25.7118 33.4501 25.6637 33.625C25.5981 33.8742 25.3969 33.9616 25.1738 33.8698C23.8049 33.3102 23.1664 31.8152 23.1664 30.1278C23.1664 27.3475 25.515 24.012 30.1684 24.012C33.9077 24.012 36.37 26.718 36.37 29.6207C36.37 33.4633 34.2314 36.331 31.0824 36.331C30.0241 36.331 29.0313 35.7583 28.6901 35.1113C28.6901 35.1113 28.1216 37.367 27.9991 37.8042C27.7936 38.5605 27.3868 39.3124 27.0151 39.9025C27.9169 40.1684 28.8521 40.3039 29.7923 40.3047C35.2023 40.3047 39.5889 35.9201 39.5889 30.5125C39.5889 25.1049 35.2067 20.7158 29.7966 20.7158Z" fill="#274C5B"/>
+                    </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="hidden lg:block w-[1px] h-[225px] md:h-[235px] lg:h-[270px] bg-currentGray"
+          ></div>
+        </div>
+        <div>
+          <p
+            class="text-[18px] md mb-4:text-[24px] lg:text-[30px] text-currentBlue roboto-bold"
+          >
+            Utility Pages
+          </p>
+          <div class="md:text-[18px] text-currentGray">
+            <div>
+              <a href="#" class="leading-[48px]"> Style Guide</a>
+            </div>
+            <div>
+              <a href="#" class="leading-[48px]"> 404 Not Found </a>
+            </div>
+            <div>
+              <a href="#" class="leading-[48px]"> Password Protected </a>
+            </div>
+            <div>
+              <a href="#" class="leading-[48px]"> Licences </a>
+            </div>
+            <div>
+              <a href="#" class="leading-[48px]"> Changelog </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+    <hr class="bg-[#D4D4D4] mt-12">
+    <p class="rubik-light text-center py-4 text-[18px] text-currentGray">Copyright © <strong class="text-currentBlue rubik-semibold">Organick</strong> </p>
+  </footer>
+</div>      
+<script>
+  const navBtn = document.querySelector(".nav__btn"),
+    navList = document.querySelector(".nav__list");
+
+  navBtn.addEventListener("click", () => {
+    navList.classList.toggle("nav__list_active");
+  });
+</script>
+<script src="./project/plugins/flowbite/cdnjs.cloudflare.com_ajax_libs_flowbite_1.6.6_flowbite.min.js"></script>
+<script src="./project/plugins/aos/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+</body>
+</html>
